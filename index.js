@@ -19,9 +19,11 @@ function showDate(){
     dateCellElements[3].innerText = '/';
     dateCellElements[4].innerText = day;
 
+    if (window.location.protocol !== 'https:'){ 
+        console.log(getFact(month, day).resolve)
+        document.getElementById('factcontainer').innerHTML = getFact(month, day);
+    }
     
-    console.log(getFact(month, day).resolve)
-    document.getElementById('factcontainer').innerHTML = getFact(month, day);
 
 }
 
